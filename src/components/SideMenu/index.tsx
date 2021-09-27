@@ -5,7 +5,10 @@ import { Title } from "../../style/components/titles";
 import { sideMenuState } from "../bin/store";
 import { SideMenuWrapper } from "./styles";
 
-const SideMenuContent = (props: any): JSX.Element => {
+const SideMenuContent = (props: {
+	className?: string;
+	active?: boolean;
+}): JSX.Element => {
 	const state = useRecoilValue(sideMenuState);
 	return (
 		<div className={props.className}>
